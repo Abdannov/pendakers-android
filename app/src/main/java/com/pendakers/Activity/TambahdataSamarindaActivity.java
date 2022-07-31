@@ -6,6 +6,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.app.DatePickerDialog;
 import android.content.ContentUris;
 import android.content.Context;
 import android.content.Intent;
@@ -15,10 +16,12 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.InputType;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -31,6 +34,10 @@ import com.pendakers.Model.DataSamarinda;
 import com.pendakers.Model.ResponseData;
 import com.pendakers.Model.ResponseModelSamarinda;
 import com.pendakers.R;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -56,7 +63,10 @@ public class TambahdataSamarindaActivity extends AppCompatActivity {
 
         ino_mou = findViewById(R.id.nomorMOU);
         ino_pks = findViewById(R.id.nomorPKS);
+
         itgl_pks = findViewById(R.id.tglPKS);
+        itgl_pks.setInputType(InputType.TYPE_NULL);
+
         ithn = findViewById(R.id.tahun);
         ijw = findViewById(R.id.jangkawaktu);
         iuk = findViewById(R.id.unitkerja);
@@ -69,12 +79,20 @@ public class TambahdataSamarindaActivity extends AppCompatActivity {
 
         ithp = findViewById(R.id.tahapan);
 
+
+        itgl_pks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDateDialog(itgl_pks);
+            }
+        });
+
+
         binput.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mou = ino_mou.getText().toString();
                 pks = ino_pks.getText().toString();
-                tanggal = itgl_pks.getText().toString();
                 tahun = ithn.getText().toString();
                 jangka_waktu = ijw.getText().toString();
                 unitkerja = iuk.getText().toString();
@@ -87,8 +105,6 @@ public class TambahdataSamarindaActivity extends AppCompatActivity {
                     ino_mou.setError("Nomor MOU harus diisi");
                 }else if(pks.trim().equals("")){
                     ino_pks.setError("Nomor PKS harus diisi");
-                }else if(tanggal.trim().equals("")){
-                    itgl_pks.setError("Tanggal harus diisi");
                 }else if(tahun.trim().equals("")){
                     ithn.setError("Tahun harus diisi");
                 }else if(jangka_waktu.trim().equals("")){
@@ -125,7 +141,22 @@ public class TambahdataSamarindaActivity extends AppCompatActivity {
         });
     }
 
+    public void showDateDialog(EditText itgl_pks){
+        Calendar calendar = Calendar.getInstance();
+        DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                calendar.set(Calendar.YEAR,year);
+                calendar.set(Calendar.MONTH,month);
+                calendar.set(Calendar.DAY_OF_MONTH,dayOfMonth);
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-mm-dd");
+                TambahdataSamarindaActivity.this.itgl_pks.setText(simpleDateFormat.format(calendar));
 
+            }
+        };
+
+        new DatePickerDialog(TambahdataSamarindaActivity.this, dateSetListener, calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH)).show();
+    }
 
     void inputdataSamarinda() {
         APIRequestData ardDatasmd = RetroServer.konekRetrofit().create(APIRequestData.class);

@@ -1,5 +1,6 @@
 package com.pendakers.Model;
 
+
 public class CreateDataSamarinda {
     public String tentang, mou, pks, tanggal, jangka_waktu, unitkerja, mitrakerja, tahapan, tahun, file;
 
