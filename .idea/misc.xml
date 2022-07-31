@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/drawable/greenbox.xml" value="0.24722222222222223" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/drawable/my_border.xml" value="0.24722222222222223" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/drawable/my_button.xml" value="0.25277777777777777" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/drawable/my_shapelogo.xml" value="0.24722222222222223" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_balikpapan.xml" value="0.152" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_berau.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_bontang.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_detailpks_balikpapan.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_detailpks_berau.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_detailpks_bontang.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_detailpks_kubar.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_detailpks_kukar.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_detailpks_kutim.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_detailpks_mku.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_detailpks_paser.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_detailpks_ppu.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_detailpks_samarinda.xml" value="0.4" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_home.xml" value="0.176" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_kubar.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_kukar.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_kutim.xml" value="0.17300724637681159" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_listdata_balikpapan.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_listdata_berau.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_listdata_bontang.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_listdata_kubar.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_listdata_kukar.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_listdata_kutim.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_listdata_mku.xml" value="0.12685185185185185" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_listdata_paser.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_listdata_ppu.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_listdata_samarinda.xml" value="0.15307971014492755" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_mahakam_ulu.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_paser.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_ppuactivity.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_samarinda.xml" value="0.2" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_tambahdata_balikpapan.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_tambahdata_berau.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_tambahdata_bontang.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_tambahdata_kubar.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_tambahdata_kukar.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_tambahdata_kutim.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_tambahdata_mku.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_tambahdata_paser.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_tambahdata_ppu.xml" value="0.264" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_tambahdata_samarinda.xml" value="0.264" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/activity_updatedata_samarinda.xml" value="0.17028985507246377" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/list_balikpapan.xml" value="0.2" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/list_berau.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/list_bontang.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/list_kubar.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/list_kukar.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/list_kutim.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/list_mku.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/list_paser.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/list_ppu.xml" value="0.1" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/list_samarinda.xml" value="0.264" />
+        <entry key="..\:/Users/USER/AndroidStudioProjects/Pendakers/app/src/main/res/layout/samarinda_formpks.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

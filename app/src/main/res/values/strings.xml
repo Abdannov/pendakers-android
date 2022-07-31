@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Pendakers</string>
+    <string name="nomou">Nomor MOU</string>
+    <string name="nopks">Nomor PKS</string>
+    <string name="tglpks">YYYY-MM-DD</string>
+    <string name="mb">Masa Berlaku</string>
+    <string name="jw">Jangka Waktu</string>
+    <string name="uk">Unit Kerja</string>
+    <string name="mk">Mitra Kerja</string>
+    <string name="tentang">Tentang</string>
+    <string name="jmou">Tahapan</string>
+    <string name="df">Upload data disini</string>
+
+    <string-array name="tahapan">
+        <item>"Nota Kesepahaman"</item>
+        <item>"Nota Kesepakatan"</item>
+        <item>"Kesepakatan Bersama"</item>
+        <item>"Perjanjian Bersama"</item>
+    </string-array>
+</resources>
