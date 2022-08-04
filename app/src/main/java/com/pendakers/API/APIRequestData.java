@@ -3,6 +3,7 @@ package com.pendakers.API;
 import com.pendakers.Model.CreateDataSamarinda;
 import com.pendakers.Model.DataSamarinda;
 import com.pendakers.Model.ResponseData;
+import com.pendakers.Model.ResponseLogin;
 import com.pendakers.Model.ResponseModelBalikpapan;
 import com.pendakers.Model.ResponseModelBerau;
 import com.pendakers.Model.ResponseModelBontang;
@@ -23,6 +24,14 @@ import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
 public interface APIRequestData {
+    @POST("api/login")
+    @FormUrlEncoded
+    @Headers({
+            "Accept: Application/json",
+            "Content-Type: application/x-www-form-urlencoded"
+    })
+    Call<ResponseLogin> getLoginApi(@Field("email") String email, @Field("password") String password);
+
     @Headers({
             "Accept: application/json",
             "Content-Type: application/json"
