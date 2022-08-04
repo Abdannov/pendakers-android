@@ -41,8 +41,8 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String email = etEmail.getText().toString();
                 String pass = etPass.getText().toString();
-                startActivity(new Intent(LoginActivity.this, HomeActivity.class));
-//                loginApi(email,pass);
+//                startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                loginApi(email,pass);
             }
         });
     }
@@ -57,8 +57,8 @@ public class LoginActivity extends AppCompatActivity {
                     PrefManager prf = new PrefManager(LoginActivity.this);
                     assert response.body() != null;
                     prf.setString(Const.TOKEN,response.body().getAccessToken());
+                    startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                 }
-                startActivity(new Intent(LoginActivity.this, HomeActivity.class));
             }
             @Override
             public void onFailure(Call<ResponseLogin> call, Throwable throwable) {
