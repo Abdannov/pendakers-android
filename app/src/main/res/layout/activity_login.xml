@@ -67,7 +67,8 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:ems="100"
-            android:hint="email@gmail.com" />
+            android:hint="@string/hint"
+            android:inputType="textEmailAddress"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -87,7 +88,8 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:ems="100"
-            android:hint="password" />
+            android:hint="@string/password"
+            android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton

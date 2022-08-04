@@ -75,7 +75,7 @@ public class UpdatedataSamarinda extends AppCompatActivity {
     }
 
     private void updateData(){
-        APIRequestData ardData = RetroServer.konekRetrofit().create(APIRequestData.class);
+        /*APIRequestData ardData = RetroServer.konekRetrofit().create(APIRequestData.class);
         Call<ResponseModelSamarinda> updateData = ardData.ardUpdatesmd(xid, xjns);
 
         updateData.enqueue(new Callback<ResponseModelSamarinda>() {
@@ -92,6 +92,6 @@ public class UpdatedataSamarinda extends AppCompatActivity {
             public void onFailure(Call<ResponseModelSamarinda> call, Throwable throwable) {
                 Toast.makeText(UpdatedataSamarinda.this, "Gagal Menghubungi Server", Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
     }
 }

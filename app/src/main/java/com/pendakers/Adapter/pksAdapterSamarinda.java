@@ -1,7 +1,6 @@
 package com.pendakers.Adapter;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,32 +9,25 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.pendakers.API.APIRequestData;
-import com.pendakers.API.RetroServer;
 import com.pendakers.Model.DataSamarinda;
-import com.pendakers.Model.ResponseModelSamarinda;
 import com.pendakers.R;
-import com.pendakers.Activity.UpdatedataSamarinda;
-import com.pendakers.detailpksSamarinda;
+import com.pendakers.Activity.DetailPksActivity;
 
 import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class pksAdapterSamarinda extends RecyclerView.Adapter<pksAdapterSamarinda.HolderData>{
     private Context ctx;
     private List<DataSamarinda> listsmd;
     private List<DataSamarinda> getsmd;
     private int idsmd;
+    private String codeAccess;
 
-    public pksAdapterSamarinda(Context ctx, List<DataSamarinda> listsmd) {
+    public pksAdapterSamarinda(Context ctx, List<DataSamarinda> listsmd, String codeAccess) {
         this.ctx = ctx;
         this.listsmd = listsmd;
+        this.codeAccess = codeAccess;
     }
 
     @NonNull
@@ -58,26 +50,25 @@ public class pksAdapterSamarinda extends RecyclerView.Adapter<pksAdapterSamarind
         holder.tv_thn.setText(dm.getTahun());
         holder.tv_uk.setText(dm.getUnitkerja());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(ctx, detailpksSamarinda.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("mou",dm.getMou());
-                bundle.putString("pks", dm.getPks());
-                bundle.putString("tanggal", dm.getTanggal());
+        holder.itemView.setOnClickListener(view -> {
+            Intent intent = new Intent(ctx, DetailPksActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("codeAccess",codeAccess);
+            bundle.putString("id", String.valueOf(dm.getId()));
+            bundle.putString("mou",dm.getMou());
+            bundle.putString("pks", dm.getPks());
+            bundle.putString("tanggal", dm.getTanggal());
 //                bundle.putString("masa_berlaku", dm.getMasa_berlaku());
-                bundle.putString("jangka_waktu", dm.getJangka_waktu());
-                bundle.putString("unitkerja", dm.getUnitkerja());
-                bundle.putString("mitrakerja", dm.getMitrakerja());
-                bundle.putString("tentang", dm.getTentang());
-                bundle.putString("tahapan", dm.getTahapan());
-                bundle.putString("tahun", dm.getTahun());
-                bundle.putString("file", dm.getFile());
+            bundle.putString("jangka_waktu", dm.getJangka_waktu());
+            bundle.putString("unitkerja", dm.getUnitkerja());
+            bundle.putString("mitrakerja", dm.getMitrakerja());
+            bundle.putString("tentang", dm.getTentang());
+            bundle.putString("tahapan", dm.getTahapan());
+            bundle.putString("tahun", dm.getTahun());
+            bundle.putString("file", dm.getFile());
 
-                intent.putExtras(bundle);
-                ctx.startActivity(intent);
-            }
+            intent.putExtras(bundle);
+            ctx.startActivity(intent);
         });
     }
 
@@ -100,7 +91,7 @@ public class pksAdapterSamarinda extends RecyclerView.Adapter<pksAdapterSamarind
             tv_thn = itemView.findViewById(R.id.tv_tahun);
             tv_uk = itemView.findViewById(R.id.tv_uk);
 
-            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            /*itemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
                     AlertDialog.Builder dialogPesan = new AlertDialog.Builder(ctx);
@@ -121,10 +112,10 @@ public class pksAdapterSamarinda extends RecyclerView.Adapter<pksAdapterSamarind
 
                     return false;
                 }
-            });
+            });*/
         }
 
-        private void updateData(){
+        /*private void updateData(){
             APIRequestData ardData = RetroServer.konekRetrofit().create(APIRequestData.class);
             Call<ResponseModelSamarinda> getData = ardData.ardGetsmd(idsmd);
 
@@ -172,6 +163,6 @@ public class pksAdapterSamarinda extends RecyclerView.Adapter<pksAdapterSamarind
             });
 
 
-        }
+        }*/
     }
 }

@@ -1,26 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.SamarindaActivity">
+    android:background="@color/white"
+    tools:context=".Activity.PendakerActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="3dp"
+        app:titleTextColor="@color/white"
+        android:background="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_back_24" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/tambahdatasmd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="32dp"
-        android:clickable="true"
-
-        android:src="@drawable/ic_add" />
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/todo" />
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/srl_smd"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_below="@+id/toolbar"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_datasmd"
@@ -30,4 +44,4 @@
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

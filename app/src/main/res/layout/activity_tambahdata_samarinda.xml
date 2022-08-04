@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Activity.TambahdataSamarindaActivity">
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -26,12 +27,13 @@
             android:textStyle="bold"
             android:textSize="25dp" />
 
-    </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
         android:id="@+id/linearLayout6"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:background="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +58,8 @@
                     android:layout_height="wrap_content"
                     android:background="@color/white"
                     android:ems="100"
-                    android:hint="@string/nomou" />
+                    android:hint="@string/nomou"
+                    android:inputType="text"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -72,6 +75,7 @@
                     android:layout_height="wrap_content"
                     android:ems="100"
                     android:hint="@string/nopks"
+                    android:inputType="text"
                     android:background="@color/white"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,6 +108,7 @@
                     android:layout_height="wrap_content"
                     android:ems="100"
                     android:hint="Tahun"
+                    android:inputType="number"
                     android:background="@color/white"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -120,6 +125,7 @@
                     android:layout_height="wrap_content"
                     android:ems="100"
                     android:hint="@string/jw"
+                    android:inputType="text"
                     android:background="@color/white"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -191,11 +197,12 @@
 
             <TextView
                 android:id="@+id/nameFile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="21dp"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="25dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:text="@string/value"/>
             <Button
                 android:id="@+id/uploadFile"
                 android:layout_width="match_parent"
@@ -218,26 +225,30 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btninput"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="25dp"
             android:layout_marginBottom="25dp"
+            android:layout_marginRight="25dp"
             android:background="@drawable/my_button"
             android:padding="10dp"
             android:text="KIRIM"
+            android:visibility="gone"
             android:textColor="@color/white" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnNotify"
-            android:layout_width="wrap_content"
+            android:id="@+id/btnupdate"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="25dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="25dp"
+            android:visibility="gone"
             android:background="@drawable/my_button"
             android:padding="10dp"
-            android:text="Setel Pengingat"
+            android:text="Update"
             android:textColor="@color/white" />
     </LinearLayout>
 

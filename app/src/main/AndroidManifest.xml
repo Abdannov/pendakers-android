@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
@@ -18,7 +19,11 @@
         android:roundIcon="@drawable/logoprovkaltim"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pendakers"
-        android:usesCleartextTraffic="true">
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup,android:theme,android:usesCleartextTraffic">
         <activity
             android:name=".Activity.LoginActivity"
             android:exported="false" />
@@ -26,64 +31,22 @@
             android:name=".Activity.UpdatedataSamarinda"
             android:exported="false" />
         <activity
-            android:name=".Activity.TambahdataMKU"
-            android:exported="false" />
-        <activity
-            android:name=".detailpksMKU"
-            android:exported="false" />
-        <activity
             android:name=".listdataMKU"
-            android:exported="false" />
-        <activity
-            android:name=".detailpksPPU"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.TambahdataPPU"
             android:exported="false" />
         <activity
             android:name=".listdataPPU"
             android:exported="false" />
         <activity
-            android:name=".detailpksPaser"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.TambahdataPaser"
-            android:exported="false" />
-        <activity
             android:name=".listdataPaser"
-            android:exported="false" />
-        <activity
-            android:name=".detailpksBerau"
             android:exported="false" />
         <activity
             android:name=".listdataBerau"
             android:exported="false" />
         <activity
-            android:name=".Activity.TambahdataBerau"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.TambahdataKutim"
-            android:exported="false" />
-        <activity
-            android:name=".detailpksKutim"
-            android:exported="false" />
-        <activity
             android:name=".listdataKutim"
             android:exported="false" />
         <activity
-            android:name=".Activity.TambahdataKubar"
-            android:exported="false" />
-        <activity
             android:name=".listdataKubar"
-            android:exported="false" />
-        <activity
-            android:name=".detailpksKubar"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.TambahdataKukar"
-            android:exported="false" />
-        <activity
-            android:name=".detailpksKukar"
             android:exported="false" />
         <activity
             android:name=".listdataKukar"
@@ -92,22 +55,11 @@
             android:name=".listdataBontang"
             android:exported="false" />
         <activity
-            android:name=".Activity.TambahdataBontang"
-            android:exported="false" />
-        <activity
-            android:name=".detailpksBontang"
-            android:exported="false" />
-        <activity
-            android:name=".Activity.TambahdataBalikpapan"
-            android:exported="false" />
-        <activity
-            android:name=".detailpksBalikpapan"
-            android:exported="false" />
-        <activity
             android:name=".listdataBalikpapan"
             android:exported="false" />
         <activity
-            android:name=".detailpksSamarinda"
+            android:name=".Activity.DetailPksActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".listdataSamarinda"
@@ -115,48 +67,11 @@
         <activity
             android:name=".Activity.TambahdataSamarindaActivity"
             android:exported="false"
-            android:parentActivityName=".Activity.SamarindaActivity" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".Activity.MahakamUluActivity"
+            android:name=".Activity.PendakerActivity"
             android:exported="false"
-            android:label="Mahakam Ulu" />
-        <activity
-            android:name=".Activity.PPUActivity"
-            android:exported="false"
-            android:label="Penajam Paser Utara" />
-        <activity
-            android:name=".Activity.PaserActivity"
-            android:exported="false"
-            android:label="Paser" />
-        <activity
-            android:name=".Activity.BerauActivity"
-            android:exported="false"
-            android:label="Berau" />
-        <activity
-            android:name=".Activity.KutimActivity"
-            android:exported="false"
-            android:label="Kutai Timur" />
-        <activity
-            android:name=".Activity.KubarActivity"
-            android:exported="false"
-            android:label="Kutai Barat" />
-        <activity
-            android:name=".Activity.KukarActivity"
-            android:exported="false"
-            android:label="Kutai Kartanegara" />
-        <activity
-            android:name=".Activity.BontangActivity"
-            android:exported="false"
-            android:label="Bontang" />
-        <activity
-            android:name=".Activity.BalikpapanActivity"
-            android:exported="false"
-            android:label="Balikpapan" />
-        <activity
-            android:name=".Activity.SamarindaActivity"
-            android:exported="false"
-            android:label="Kota Samarinda"
-            android:parentActivityName=".Activity.HomeActivity" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activity.HomeActivity"
             android:exported="false"

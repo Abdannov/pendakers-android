@@ -15,16 +15,23 @@ import com.pendakers.Model.ResponseModelPPU;
 import com.pendakers.Model.ResponseModelPaser;
 import com.pendakers.Model.ResponseModelSamarinda;
 
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.Headers;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
 
 public interface APIRequestData {
-    @POST("api/login")
+    @POST("login")
     @FormUrlEncoded
     @Headers({
             "Accept: Application/json",
@@ -36,53 +43,46 @@ public interface APIRequestData {
             "Accept: application/json",
             "Content-Type: application/json"
     })
-    @GET("selectsmd.php")
-    Call<ResponseModelSamarinda> ardSelectData();
+    @GET("dataPendaker")
+    Call<ResponseModelSamarinda> ardSelectData(@Header ("Authorization") String token,
+                                               @Query("kabkota") String kabkota);
 
-    @GET("selectbpp.php")
-    Call<ResponseModelBalikpapan> ardSelectDatabpp();
-
-    @GET("selectbtg.php")
-    Call<ResponseModelBontang> ardSelectDatabtg();
-
-    @GET("selectberau.php")
-    Call<ResponseModelBerau> ardSelectDataBerau();
-
-    @GET("selectkubar.php")
-    Call<ResponseModelKubar> ardSelectDataKubar();
-
-    @GET("selectkukar.php")
-    Call<ResponseModelKukar> ardSelectDataKukar();
-
-    @GET("selectkutim.php")
-    Call<ResponseModelKutim> ardSelectDataKutim();
-
-    @GET("selectmu.php")
-    Call<ResponseModelMKU> ardSelectDataMU();
-
-    @GET("selectpaser.php")
-    Call<ResponseModelPaser> ardSelectDataPaser();
-
-    @GET("selectppu.php")
-    Call<ResponseModelPPU> ardSelectDataPPU();
-
+    @Multipart
     @Headers({
-            "Content-Type: application/json"
+            "Accept: application/json",
     })
-    @POST("insertsmd.php")
-    Call<ResponseData> ardInsertsmd(@Body CreateDataSamarinda dataSamarinda);
+    @POST("dataPendaker")
+    Call<ResponseData> ardInsertsmd(@Header ("Authorization") String token,
+                                    @Part("kabkota") RequestBody kabkota,
+                                    @Part("tentang") RequestBody tentang,
+                                    @Part("mou") RequestBody mou,
+                                    @Part("pks") RequestBody pks,
+                                    @Part("tanggal") RequestBody tanggal,
+                                    @Part("jangka_waktu") RequestBody jangkaWaktu,
+                                    @Part("unitkerja") RequestBody unitkerja,
+                                    @Part("mitrakerja") RequestBody mitrakerja,
+                                    @Part("tahapan") RequestBody tahapan,
+                                    @Part("tahun") RequestBody tahun,
+                                    @Part MultipartBody.Part file);
 
-    @FormUrlEncoded
-    @POST("getsmd.php")
-    Call<ResponseModelSamarinda> ardGetsmd(
-            @Field("id") int id
-    );
+    @Multipart
+    @Headers({
+            "Accept: application/json",
+    })
+    @POST("updatePendaker/{id}")
+    Call<ResponseData> ardUpdatesmd(@Path("id") Long id,
+                                    @Header ("Authorization") String token,
+                                    @Part("kabkota") RequestBody kabkota,
+                                    @Part("tentang") RequestBody tentang,
+                                    @Part("mou") RequestBody mou,
+                                    @Part("pks") RequestBody pks,
+                                    @Part("tanggal") RequestBody tanggal,
+                                    @Part("jangka_waktu") RequestBody jangkaWaktu,
+                                    @Part("unitkerja") RequestBody unitkerja,
+                                    @Part("mitrakerja") RequestBody mitrakerja,
+                                    @Part("tahapan") RequestBody tahapan,
+                                    @Part("tahun") RequestBody tahun,
+                                    @Part MultipartBody.Part file);
 
-    @FormUrlEncoded
-    @POST("updatesmd.php")
-    Call<ResponseModelSamarinda> ardUpdatesmd(
-            @Field("id") int id,
-            @Field("tahapan") String tahapan
-    );
 
 }

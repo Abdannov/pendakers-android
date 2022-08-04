@@ -7,11 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.pendakers.Manager.Const;
+import com.pendakers.Manager.PrefManager;
 import com.pendakers.R;
 
 public class HomeActivity extends AppCompatActivity {
 
-    Button smd, bpp, btg, kukar, kubar, kutim, berau, paser, ppu, mku;
+    Button smd, bpp, btg, kukar, kubar, kutim, berau, paser, ppu, mku, logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +24,9 @@ public class HomeActivity extends AppCompatActivity {
         smd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this, SamarindaActivity.class));
+                Intent intent = new Intent(HomeActivity.this, PendakerActivity.class);
+                intent.putExtra("codeAccess","samarinda");
+                startActivity(intent);
             }
         });
 
@@ -30,7 +34,9 @@ public class HomeActivity extends AppCompatActivity {
         bpp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this, BalikpapanActivity.class));
+                Intent intent = new Intent(HomeActivity.this, PendakerActivity.class);
+                intent.putExtra("codeAccess","balikpapan");
+                startActivity(intent);
             }
         });
 
@@ -38,7 +44,9 @@ public class HomeActivity extends AppCompatActivity {
         btg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this, BontangActivity.class));
+                Intent intent = new Intent(HomeActivity.this, PendakerActivity.class);
+                intent.putExtra("codeAccess","bontang");
+                startActivity(intent);
             }
         });
 
@@ -46,7 +54,9 @@ public class HomeActivity extends AppCompatActivity {
         kukar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this, KukarActivity.class));
+                Intent intent = new Intent(HomeActivity.this, PendakerActivity.class);
+                intent.putExtra("codeAccess","kukar");
+                startActivity(intent);
             }
         });
 
@@ -54,7 +64,9 @@ public class HomeActivity extends AppCompatActivity {
         kubar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this, KubarActivity.class));
+                Intent intent = new Intent(HomeActivity.this, PendakerActivity.class);
+                intent.putExtra("codeAccess","kubar");
+                startActivity(intent);
             }
         });
 
@@ -62,7 +74,9 @@ public class HomeActivity extends AppCompatActivity {
         kutim.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this, KutimActivity.class));
+                Intent intent = new Intent(HomeActivity.this, PendakerActivity.class);
+                intent.putExtra("codeAccess","kutim");
+                startActivity(intent);
             }
         });
 
@@ -70,7 +84,9 @@ public class HomeActivity extends AppCompatActivity {
         berau.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this, BerauActivity.class));
+                Intent intent = new Intent(HomeActivity.this, PendakerActivity.class);
+                intent.putExtra("codeAccess","berau");
+                startActivity(intent);
             }
         });
 
@@ -78,7 +94,9 @@ public class HomeActivity extends AppCompatActivity {
         paser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this, PaserActivity.class));
+                Intent intent = new Intent(HomeActivity.this, PendakerActivity.class);
+                intent.putExtra("codeAccess","paser");
+                startActivity(intent);
             }
         });
 
@@ -86,7 +104,9 @@ public class HomeActivity extends AppCompatActivity {
         ppu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this, PPUActivity.class));
+                Intent intent = new Intent(HomeActivity.this, PendakerActivity.class);
+                intent.putExtra("codeAccess","penajam");
+                startActivity(intent);
             }
         });
 
@@ -94,8 +114,19 @@ public class HomeActivity extends AppCompatActivity {
         mku.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(HomeActivity.this, MahakamUluActivity.class));
+                Intent intent = new Intent(HomeActivity.this, PendakerActivity.class);
+                intent.putExtra("codeAccess","mahakam");
+                startActivity(intent);
             }
+        });
+
+        logout = findViewById(R.id.btnLogout);
+        logout.setOnClickListener(v -> {
+            PrefManager prf= new PrefManager(HomeActivity.this);
+            prf.remove(Const.TOKEN);
+            Intent i = new Intent(HomeActivity.this, LoginActivity.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(i);
         });
     }
 }

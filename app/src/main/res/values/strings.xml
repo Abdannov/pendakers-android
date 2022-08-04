@@ -10,6 +10,12 @@
     <string name="tentang">Tentang</string>
     <string name="jmou">Tahapan</string>
     <string name="df">Upload data disini</string>
+    <string name="value">-</string>
+    <string name="todo">TODO</string>
+    <string name="hint">email@gmail.com</string>
+    <string name="password">password</string>
+    <string name="logout">Logout</string>
+    <string name="download_file">Download File</string>
 
     <string-array name="tahapan">
         <item>"Nota Kesepahaman"</item>

@@ -1,142 +1,189 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#e9e9e9"
-    tools:context=".detailpksSamarinda">
+    tools:context=".Activity.DetailPksActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="3dp"
+        app:titleTextColor="@color/white"
+        app:title="Detail"
+        android:background="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_back_24" />
 
     <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/my_border"
+        android:orientation="vertical"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:layout_margin="10dp"
-        android:orientation="vertical"
-        android:background="@drawable/my_border">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp">
+
             <TextView
                 android:id="@+id/fieldid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:textColor="#00a859"
-                android:textStyle="bold"
                 android:textSize="20dp"
-                android:layout_marginLeft="20dp"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="10dp"
-                android:textColor="#00a859"
+                android:layout_marginBottom="10dp"
                 android:text="Info dan Detail"
+                android:textColor="#00a859"
                 android:textSize="20dp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/fieldnomormou"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="40dp"
-            android:textColor="@color/black"
-            android:text="@string/nomou" />
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/nomou"
+            android:textColor="@color/black" />
+
+        <TextView
             android:id="@+id/fieldnomorpks"
-            android:layout_marginLeft="40dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="@color/black"
-            android:text="@string/nopks" />
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/nopks"
+            android:textColor="@color/black" />
+
+        <TextView
             android:id="@+id/fieldtglpks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginBottom="10dp"
             android:text="@string/tglpks"
             android:textColor="@color/black" />
 
         <TextView
+            android:id="@+id/fieldthn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/fieldthn"
             android:layout_marginLeft="40dp"
             android:layout_marginBottom="10dp"
             android:text="Tahun"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginBottom="10dp"
             android:id="@+id/fieldjw"
-            android:textColor="@color/black"
-            android:text="@string/jw" />
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginBottom="10dp"
+            android:text="@string/jw"
+            android:textColor="@color/black" />
+
+        <TextView
             android:id="@+id/fielduk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="10dp"
             android:text="@string/uk"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginBottom="10dp"
             android:id="@+id/fieldmk"
-            android:textColor="@color/black"
-            android:text="@string/mk"/>
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginBottom="10dp"
+            android:text="@string/mk"
+            android:textColor="@color/black" />
+
+        <TextView
             android:id="@+id/fieldjenis"
-            android:textColor="@color/black"
-            android:text="@string/jmou"/>
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginBottom="10dp"
+            android:text="@string/jmou"
+            android:textColor="@color/black" />
+
+        <TextView
             android:id="@+id/fielddf"
-            android:textColor="@color/black"
-            android:text="@string/df"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/df"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/btnDownloadPdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/download_file"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/teal_200" />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/my_border"
         android:layout_margin="10dp"
+        android:background="@drawable/my_border"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp">
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
         <TextView
+            android:id="@+id/fieldtentang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
             android:layout_marginLeft="30dp"
-            android:id="@+id/fieldtentang"
+            android:text="@string/tentang"
             android:textColor="@color/black"
-            android:text="@string/tentang" />
+            android:textStyle="bold" />
     </LinearLayout>
-</LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/my_button"
+        android:padding="10dp"
+        android:text="Edit"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
