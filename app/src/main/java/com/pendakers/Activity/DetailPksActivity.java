@@ -85,20 +85,18 @@ public class DetailPksActivity extends AppCompatActivity {
             intent.putExtra("file",df);
             startActivity(intent);
         });
-        btnDownloadPdf.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Uri uri = Uri.parse(df);
-                DownloadManager.Request request = new DownloadManager.Request(uri);
-                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-                request.setVisibleInDownloadsUi(false);
-                request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, uri.getLastPathSegment());
+        btnDownloadPdf.setOnClickListener(v -> {
+            String baseUrl ="http://pendatakers.com/";
+            String baseUrlLocal ="http://192.168.0.110:8000/";
+            Uri uri = Uri.parse(baseUrlLocal+"storage/file/"+df);
+            DownloadManager.Request request = new DownloadManager.Request(uri);
+            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+            request.setVisibleInDownloadsUi(false);
+            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, uri.getLastPathSegment());
 
-                dm = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-                dm.enqueue(request);
-            }
+            dm = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+            dm.enqueue(request);
         });
-
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

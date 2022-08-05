@@ -10,7 +10,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class RetroServer {
-    public static final String baseURL = "http://192.168.0.110:8000/api/";
+    public static final String baseURLLocal = "http://192.168.0.110:8000/api/";
+    public static final String baseURL = "http://pendatakers.com/api/";
     public static Retrofit retro;
 
     public static Gson gson = new GsonBuilder()
@@ -27,7 +28,7 @@ public class RetroServer {
 
         if(retro == null){
             retro = new Retrofit.Builder()
-                    .baseUrl(baseURL)
+                    .baseUrl(baseURLLocal)
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .client(httpClient.build())
                     .build();

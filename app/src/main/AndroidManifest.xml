@@ -26,43 +26,14 @@
         tools:replace="android:allowBackup,android:theme,android:usesCleartextTraffic">
         <activity
             android:name=".Activity.LoginActivity"
+            android:noHistory="true"
             android:exported="false" />
         <activity
             android:name=".Activity.UpdatedataSamarinda"
             android:exported="false" />
         <activity
-            android:name=".listdataMKU"
-            android:exported="false" />
-        <activity
-            android:name=".listdataPPU"
-            android:exported="false" />
-        <activity
-            android:name=".listdataPaser"
-            android:exported="false" />
-        <activity
-            android:name=".listdataBerau"
-            android:exported="false" />
-        <activity
-            android:name=".listdataKutim"
-            android:exported="false" />
-        <activity
-            android:name=".listdataKubar"
-            android:exported="false" />
-        <activity
-            android:name=".listdataKukar"
-            android:exported="false" />
-        <activity
-            android:name=".listdataBontang"
-            android:exported="false" />
-        <activity
-            android:name=".listdataBalikpapan"
-            android:exported="false" />
-        <activity
             android:name=".Activity.DetailPksActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:exported="false" />
-        <activity
-            android:name=".listdataSamarinda"
             android:exported="false" />
         <activity
             android:name=".Activity.TambahdataSamarindaActivity"
@@ -70,7 +41,6 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activity.PendakerActivity"
-            android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activity.HomeActivity"

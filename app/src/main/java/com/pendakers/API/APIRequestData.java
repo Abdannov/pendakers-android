@@ -47,6 +47,15 @@ public interface APIRequestData {
     Call<ResponseModelSamarinda> ardSelectData(@Header ("Authorization") String token,
                                                @Query("kabkota") String kabkota);
 
+    @Headers({
+            "Accept: application/json",
+            "Content-Type: application/json"
+    })
+    @POST("searchPendaker")
+    Call<ResponseModelSamarinda> ardSearchData(@Header ("Authorization") String token,
+                                               @Query("kabkota") String kabkota,
+                                               @Query("keyword") String keyword);
+
     @Multipart
     @Headers({
             "Accept: application/json",

@@ -57,7 +57,10 @@ public class LoginActivity extends AppCompatActivity {
                     PrefManager prf = new PrefManager(LoginActivity.this);
                     assert response.body() != null;
                     prf.setString(Const.TOKEN,response.body().getAccessToken());
-                    startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                    Intent i = new Intent(LoginActivity.this, HomeActivity.class);
+                    i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(i);
+                    finish();
                 }
             }
             @Override
