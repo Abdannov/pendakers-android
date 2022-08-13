@@ -13,7 +13,7 @@ import com.pendakers.R;
 
 public class HomeActivity extends AppCompatActivity {
 
-    Button smd, bpp, btg, kukar, kubar, kutim, berau, paser, ppu, mku, logout;
+    Button smd, bpp, btg, kukar, kubar, kutim, berau, paser, ppu, mku, pemprov, logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,6 +118,13 @@ public class HomeActivity extends AppCompatActivity {
                 intent.putExtra("codeAccess","mahakam");
                 startActivity(intent);
             }
+        });
+
+        pemprov = findViewById(R.id.pemprov);
+        pemprov.setOnClickListener(view -> {
+            Intent intent = new Intent(HomeActivity.this, PendakerActivity.class);
+            intent.putExtra("codeAccess","pemprov");
+            startActivity(intent);
         });
 
         logout = findViewById(R.id.btnLogout);
