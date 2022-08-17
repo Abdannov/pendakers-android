@@ -15,16 +15,19 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/footer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_margin="15dp"
-                android:background="@drawable/my_shapelogo"
-                android:elevation="10dp"
-                android:orientation="vertical"
-                android:padding="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vpImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -64,389 +67,316 @@
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:layout_marginTop="2dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@color/underline" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center">
 
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/samarindalogo" />
-
-                    <Button
-                        android:id="@+id/smd"
-                        android:layout_width="match_parent"
+                    <LinearLayout
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="20dp"
-                        android:background="@color/white"
-                        android:gravity="left"
-                        android:text="Kota Samarinda"
-                        android:textColor="@color/black"
-                        android:textSize="17dp"
-                        android:textStyle="bold"/>
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginRight="10dp">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/samarindalogo" />
 
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/underline" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/balikpapanlogo" />
-
-                    <Button
-                        android:id="@+id/bpp"
-                        android:layout_width="match_parent"
+                        <Button
+                            android:id="@+id/smd"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:text="Samarinda"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="20dp"
-                        android:gravity="left"
-                        android:text="Kota Balikpapan"
-                        android:textColor="@color/black"
-                        android:textSize="17dp"
-                        android:textStyle="bold"/>
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/underline" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/bontanglogo" />
-
-                    <Button
-                        android:id="@+id/btg"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="20dp"
-                        android:gravity="left"
-                        android:text="Kota Bontang"
-                        android:textColor="@color/black"
-                        android:textSize="17dp"
-                        android:textStyle="bold"/>
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/underline" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/kukarlogo" />
-
-                    <Button
-                        android:id="@+id/kukar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="20dp"
-                        android:gravity="left"
-                        android:text="Kabupaten Kutai Kartanegara"
-                        android:textColor="@color/black"
-                        android:textSize="17dp"
-                        android:textStyle="bold"/>
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/underline" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/kubarlogo" />
-
-                    <Button
-                        android:id="@+id/kubar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="left"
-                        android:paddingLeft="20dp"
-                        android:text="Kabupaten Kutai Barat"
-                        android:textColor="@color/black"
-                        android:textSize="17dp"
-                        android:textStyle="bold"/>
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/underline" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/kutimlogo" />
-
-                    <Button
-                        android:id="@+id/kutim"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="left"
-                        android:paddingLeft="20dp"
-                        android:text="Kabupaten Kutai Timur"
-                        android:textColor="@color/black"
-                        android:textSize="17dp"
-                        android:textStyle="bold"/>
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/underline" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/beraulogo" />
-
-                    <Button
-                        android:id="@+id/berau"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="left"
-                        android:paddingLeft="20dp"
-                        android:text="Kabupaten Berau"
-                        android:textColor="@color/black"
-                        android:textSize="17dp"
-                        android:textStyle="bold"/>
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/underline" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/paserlogo" />
-
-                    <Button
-                        android:id="@+id/paser"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="left"
-                        android:paddingLeft="20dp"
-                        android:text="Kabupaten Paser"
-                        android:textColor="@color/black"
-                        android:textSize="17dp"
-                        android:textStyle="bold"/>
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/underline" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/ppulogo" />
-
-                    <Button
-                        android:id="@+id/ppu"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="left"
-                        android:paddingLeft="20dp"
-                        android:text="Kabupaten Penajam Paser Utara"
-                        android:textColor="@color/black"
-                        android:textSize="17dp"
-                        android:textStyle="bold"/>
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/underline" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/mulogo" />
-
-                    <Button
-                        android:id="@+id/mku"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="left"
-                        android:paddingLeft="20dp"
-                        android:text="Kabupaten Mahakam Ulu"
-                        android:textColor="@color/black"
-                        android:textSize="17dp"
-                        android:textStyle="bold"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:scaleType="center"
-                        android:background="@drawable/logoprovkaltim" />
-
-                    <Button
-                        android:id="@+id/pemprov"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="left"
-                        android:paddingLeft="20dp"
-                        android:text="Provinsi Kalimantan Timur"
-                        android:textColor="@color/black"
-                        android:textSize="17dp"
-                        android:textStyle="bold"/>
-
-                </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/underline" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="25dp"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="75dp"
-                        android:layout_height="75dp"
-                        android:background="@drawable/logoprovkaltim" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:text="Provinsi Kalimantan Timur"
+                        android:orientation="vertical"
                         android:gravity="center"
-                        android:layout_gravity="center"
-                        android:textColor="@color/black"
-                        android:textSize="24dp"
-                        android:textStyle="bold" />
+                        android:layout_marginRight="10dp">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/balikpapanlogo" />
+
+                        <Button
+                            android:id="@+id/bpp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:text="Balikpapan"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/bontanglogo" />
+
+                        <Button
+                            android:id="@+id/btg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:text="Bontang"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
                 </LinearLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnLogout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/logout"
-                android:textColor="@color/white"
-                android:background="@drawable/my_shapelogo"
-                android:backgroundTint="#4fcd69"
-                android:layout_marginBottom="30dp"
-                android:layout_marginRight="50dp"
-                android:layout_marginLeft="50dp"
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/underline" />
 
-                app:layout_constraintBottom_toBottomOf="@+id/imageView"
-                app:layout_constraintEnd_toEndOf="@+id/imageView"
-                app:layout_constraintStart_toStartOf="@+id/imageView" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginRight="10dp">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/kukarlogo" />
 
-        </LinearLayout>
+                        <Button
+                            android:id="@+id/kukar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:text="Kutai Kartanegara"
+                            android:textColor="@color/black"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/kutimlogo" />
 
+                        <Button
+                            android:id="@+id/kutim"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:text="Kutai Timur"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/kubarlogo" />
 
-        </LinearLayout>
+                        <Button
+                            android:id="@+id/kubar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:text="Kutai barat"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/underline" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginRight="10dp">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/beraulogo" />
+
+                        <Button
+                            android:id="@+id/berau"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:text="berau"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/paserlogo" />
+
+                        <Button
+                            android:id="@+id/paser"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:text="paser"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/mulogo" />
+
+                        <Button
+                            android:id="@+id/mku"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:text="Mahakam Ulu"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/underline" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        android:layout_marginRight="10dp">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/ppulogo" />
+
+                        <Button
+                            android:id="@+id/ppu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:text="penajam"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_marginRight="10dp">
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:background="@drawable/logoprovkaltim" />
+
+                        <Button
+                            android:id="@+id/pemprov"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:text="prov kaltim"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/underline" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/my_shapelogo"
+                    android:backgroundTint="#4fcd69"
+                    android:text="@string/logout"
+                    android:textColor="@color/white"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView"
+                    app:layout_constraintStart_toStartOf="@+id/imageView" />
+
+            </LinearLayout>
 
     </ScrollView>
 

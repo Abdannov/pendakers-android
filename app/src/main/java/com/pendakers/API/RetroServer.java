@@ -28,7 +28,7 @@ public class RetroServer {
 
         if(retro == null){
             retro = new Retrofit.Builder()
-                    .baseUrl(baseURLLocal)
+                    .baseUrl(baseURL)
                     .addConverterFactory(GsonConverterFactory.create(gson))
                     .client(httpClient.build())
                     .build();

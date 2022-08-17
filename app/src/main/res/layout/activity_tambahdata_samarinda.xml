@@ -208,7 +208,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Upload File"
-                android:layout_margin="25dp"/>
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"/>
 
         </LinearLayout>
     </ScrollView>
@@ -224,8 +226,22 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btncancel"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/my_button"
+            android:padding="10dp"
+            android:text="CANCEL"
+            android:visibility="gone"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btninput"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="25dp"
@@ -239,7 +255,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnupdate"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="25dp"

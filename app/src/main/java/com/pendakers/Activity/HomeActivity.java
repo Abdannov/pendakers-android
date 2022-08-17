@@ -1,6 +1,7 @@
 package com.pendakers.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,11 +15,16 @@ import com.pendakers.R;
 public class HomeActivity extends AppCompatActivity {
 
     Button smd, bpp, btg, kukar, kubar, kutim, berau, paser, ppu, mku, pemprov, logout;
+    ViewPager viewPager;
+    SliderAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        viewPager = findViewById(R.id.vpImg);
+        adapter = new SliderAdapter(this);
+        viewPager.setAdapter(adapter);
 
         smd = findViewById(R.id.smd);
         smd.setOnClickListener(new View.OnClickListener() {

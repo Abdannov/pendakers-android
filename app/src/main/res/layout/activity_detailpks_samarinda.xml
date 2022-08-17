@@ -14,7 +14,7 @@
         android:elevation="3dp"
         app:titleTextColor="@color/white"
         app:title="Detail"
-        android:background="@color/purple_500"
+        android:background="#4fcd69"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -57,97 +57,161 @@
                 android:textSize="20dp"
                 android:textStyle="bold" />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Nomor MOU :"
+                android:layout_marginLeft="40dp"/>
+            <TextView
+                android:id="@+id/fieldnomormou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/nomou"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/fieldnomormou"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/nomou"
-            android:textColor="@color/black" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Nomor PKS  :"
+                android:layout_marginLeft="40dp"/>
+            <TextView
+                android:id="@+id/fieldnomorpks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/nopks"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/fieldnomorpks"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/nopks"
-            android:textColor="@color/black" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Pada Tanggal "
+                android:layout_marginLeft="40dp"/>
+            <TextView
+                android:id="@+id/fieldtglpks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/tglpks"
+                android:layout_marginLeft="5dp"/>
 
-        <TextView
-            android:id="@+id/fieldtglpks"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/tglpks"
-            android:textColor="@color/black" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="dan Tahun "
+                android:layout_marginLeft="5dp"/>
 
-        <TextView
-            android:id="@+id/fieldthn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginBottom="10dp"
-            android:text="Tahun"
-            android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/fieldthn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Tahun"
+                android:textColor="@color/black" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/fieldjw"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/jw"
-            android:textColor="@color/black" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Dengan Jangka Waktu "
+                android:layout_marginLeft="40dp"/>
+            <TextView
+                android:id="@+id/fieldjw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/jw"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/fielduk"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/uk"
-            android:textColor="@color/black" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Unit Kerja "
+                android:layout_marginLeft="40dp"/>
+            <TextView
+                android:id="@+id/fielduk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/uk"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/fieldmk"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/mk"
-            android:textColor="@color/black" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Bermitra Kerja dengan "
+                android:layout_marginLeft="40dp"/>
+            <TextView
+                android:id="@+id/fieldmk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/uk"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/fieldjenis"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/jmou"
-            android:textColor="@color/black" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Berupa "
+                android:layout_marginLeft="40dp"/>
+            <TextView
+                android:id="@+id/fieldjenis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/jmou"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/fielddf"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginBottom="10dp"
-            android:text="@string/df"
-            android:textColor="@color/black" />
-        <TextView
-            android:id="@+id/btnDownloadPdf"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="@string/download_file"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:textColor="@color/teal_200" />
     </LinearLayout>
 
     <LinearLayout
@@ -158,18 +222,41 @@
         android:background="@drawable/my_border"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
         <TextView
             android:id="@+id/fieldtentang"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:gravity="center"
             android:text="@string/tentang"
             android:textColor="@color/black"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/fielddf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/df"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/btnDownloadPdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/download_file"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:textColor="@color/teal_200" />
+
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton

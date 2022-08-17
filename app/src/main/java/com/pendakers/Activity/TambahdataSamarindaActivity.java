@@ -68,7 +68,7 @@ public class TambahdataSamarindaActivity extends AppCompatActivity {
     TextView idf;
     Spinner ithp;
     TextView tket, labelUpload;
-    Button binput, uploadFile, btnUpdate;
+    Button binput, uploadFile, btnUpdate, btnCancel;
     String mou, pks, tanggal, tahun, jangka_waktu, unitkerja, mitrakerja, tentang, tahapan;
     String mouValue, pksValue, tanggalValue, tahunValue, jangkaWaktuValue, unitkerjaValue, mitrakerjaValue, tentangValue, fileValue, idValue;
     String codeAcces, fromActivity;
@@ -116,6 +116,7 @@ public class TambahdataSamarindaActivity extends AppCompatActivity {
         idf = findViewById(R.id.nameFile);
         binput = findViewById(R.id.btninput);
         btnUpdate = findViewById(R.id.btnupdate);
+        btnCancel = findViewById(R.id.btncancel);
         labelUpload = findViewById(R.id.nameFile);
         uploadFile = findViewById(R.id.uploadFile);
 
@@ -130,8 +131,10 @@ public class TambahdataSamarindaActivity extends AppCompatActivity {
         labelUpload.setText(fileValue);
 
         if (fromActivity.equals("add")){
+            btnCancel.setVisibility(View.VISIBLE);
             binput.setVisibility(View.VISIBLE);
         }else {
+            btnCancel.setVisibility(View.VISIBLE);
             btnUpdate.setVisibility(View.VISIBLE);
         }
         ithp = findViewById(R.id.tahapan);
@@ -153,6 +156,15 @@ public class TambahdataSamarindaActivity extends AppCompatActivity {
         }
         itgl_pks.setOnClickListener(v -> showDateDialog(itgl_pks));
 
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TambahdataSamarindaActivity.this, PendakerActivity.class);
+                intent.putExtra("codeAccess",codeAcces);
+                intent.putExtra("from", "end");
+                startActivity(intent);
+            }
+        });
 
         binput.setOnClickListener(view -> {
             mou = ino_mou.getText().toString();
@@ -433,14 +445,16 @@ public class TambahdataSamarindaActivity extends AppCompatActivity {
         rbTahun = RequestBody.create(MultipartBody.FORM, String.valueOf(tahun));
         rbKabKota = RequestBody.create(MultipartBody.FORM, String.valueOf(codeAcces));
         PrefManager prf = new PrefManager(this);
-        Call<ResponseData> inputdata = ardDatasmd.ardInsertsmd("Bearer "+prf.getString(Const.TOKEN),rbKabKota,rbTentang,rbMou,rbPks,rbTanggal,rbJangkaWaktu,rbUnitkerja,rbMitrakerja,rbTahapan,rbTahun, filePdf);
+        Call<ResponseData> inputdata = ardDatasmd.ardInsertsmd("Bearer "+
+                prf.getString(Const.TOKEN),rbKabKota,rbTentang,rbMou,rbPks,rbTanggal, rbJangkaWaktu,rbUnitkerja,rbMitrakerja,rbTahapan,rbTahun, filePdf);
 
         inputdata.enqueue(new Callback<ResponseData>() {
             @Override
             public void onResponse(Call<ResponseData> call, Response<ResponseData> response) {
                 if(response.isSuccessful()){
                     String pesan = response.body().getPesan();
-                    Toast.makeText(TambahdataSamarindaActivity.this, pesan, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TambahdataSamarindaActivity.this, pesan,
+                            Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(TambahdataSamarindaActivity.this, PendakerActivity.class);
                     intent.putExtra("codeAccess", codeAcces);
                     startActivity(intent);
@@ -450,7 +464,8 @@ public class TambahdataSamarindaActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ResponseData> call, Throwable throwable) {
-                Toast.makeText(TambahdataSamarindaActivity.this, "Gagal Menghubungi Server | "+throwable.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(TambahdataSamarindaActivity.this,
+                        "Gagal Menghubungi Server | "+throwable.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

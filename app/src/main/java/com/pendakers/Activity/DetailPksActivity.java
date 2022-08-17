@@ -88,7 +88,7 @@ public class DetailPksActivity extends AppCompatActivity {
         btnDownloadPdf.setOnClickListener(v -> {
             String baseUrl ="http://pendatakers.com/";
             String baseUrlLocal ="http://192.168.0.110:8000/";
-            Uri uri = Uri.parse(baseUrlLocal+"storage/file/"+df);
+            Uri uri = Uri.parse(baseUrl+"storage/file/"+df);
             DownloadManager.Request request = new DownloadManager.Request(uri);
             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
             request.setVisibleInDownloadsUi(false);
