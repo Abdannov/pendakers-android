@@ -24,6 +24,10 @@
         tools:ignore="AllowBackup,GoogleAppIndexingWarning"
         tools:replace="android:allowBackup,android:theme,android:usesCleartextTraffic">
         <activity
+            android:name=".Activity.PreviewPdfActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
             android:name=".Activity.LoginActivity"
             android:exported="false"
             android:noHistory="true" />

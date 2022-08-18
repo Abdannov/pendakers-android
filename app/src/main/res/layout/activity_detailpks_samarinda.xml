@@ -246,16 +246,35 @@
             android:text="@string/df"
             android:textColor="@color/black" />
 
-        <TextView
-            android:id="@+id/btnDownloadPdf"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="@string/download_file"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:textColor="@color/teal_200" />
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/btnDownloadPdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/download_file"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_margin="12dp"
+                android:layout_gravity="center"
+                android:textColor="@color/teal_200" />
+            <TextView
+                android:id="@+id/btnPrevPdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/preview_file"
+                android:layout_margin="12dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="@color/teal_200" />
+        </LinearLayout>
+
 
     </LinearLayout>
 

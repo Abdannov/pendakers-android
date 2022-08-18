@@ -18,12 +18,14 @@ import android.widget.Toast;
 import com.pendakers.R;
 
 public class DetailPksActivity extends AppCompatActivity {
-    TextView idText, nomouText, nopksText, tglpksText, thnText, jwText, ukText, mkText, jenisText, dfText, ttText, btnDownloadPdf;
-    String id, nomou, nopks, tglpks, thn, jw, uk, mk, tt, jenis, df;
+    TextView idText, nomouText, nopksText, tglpksText, thnText, jwText, ukText, mkText, jenisText, dfText, ttText, btnDownloadPdf, btnPrevPdf;
+    String id, nomou, nopks, tglpks, thn, jw, uk, mk, tt, jenis, df,urlPdf;
     Toolbar toolbar;
     Button btnEdit;
     private String codeAccess;
     DownloadManager dm;
+    String baseUrl ="https://pendatakers.com/storage/file/";
+    String baseUrlLocal ="http://192.168.0.110:8000/storage/file/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,7 @@ public class DetailPksActivity extends AppCompatActivity {
         dfText = findViewById(R.id.fielddf);
         btnEdit = findViewById(R.id.btnEdit);
         btnDownloadPdf = findViewById(R.id.btnDownloadPdf);
+        btnPrevPdf = findViewById(R.id.btnPrevPdf);
 
         codeAccess = getIntent().getStringExtra("codeAccess");
         id = getIntent().getStringExtra("id");
@@ -57,6 +60,7 @@ public class DetailPksActivity extends AppCompatActivity {
         jenis = getIntent().getStringExtra("tahapan");
         df = getIntent().getStringExtra("file");
         tt = getIntent().getStringExtra("tentang");
+        urlPdf = baseUrl+df;
 
         idText.setText(id);
         nomouText.setText(nomou);
@@ -86,9 +90,7 @@ public class DetailPksActivity extends AppCompatActivity {
             startActivity(intent);
         });
         btnDownloadPdf.setOnClickListener(v -> {
-            String baseUrl ="http://pendatakers.com/";
-            String baseUrlLocal ="http://192.168.0.110:8000/";
-            Uri uri = Uri.parse(baseUrl+"storage/file/"+df);
+            Uri uri = Uri.parse(baseUrl+df);
             DownloadManager.Request request = new DownloadManager.Request(uri);
             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
             request.setVisibleInDownloadsUi(false);
@@ -97,6 +99,12 @@ public class DetailPksActivity extends AppCompatActivity {
             dm = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
             dm.enqueue(request);
         });
+        btnPrevPdf.setOnClickListener(v -> {
+            Intent intent = new Intent(DetailPksActivity.this, PreviewPdfActivity.class);
+            intent.putExtra("urlPdf",urlPdf);
+            startActivity(intent);
+        });
+
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

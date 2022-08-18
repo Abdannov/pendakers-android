@@ -11,7 +11,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 public class RetroServer {
     public static final String baseURLLocal = "http://192.168.0.110:8000/api/";
-    public static final String baseURL = "http://pendatakers.com/api/";
+    public static final String baseURL = "https://pendatakers.com/api/";
     public static Retrofit retro;
 
     public static Gson gson = new GsonBuilder()
