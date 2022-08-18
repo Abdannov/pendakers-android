@@ -159,10 +159,7 @@ public class TambahdataSamarindaActivity extends AppCompatActivity {
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(TambahdataSamarindaActivity.this, PendakerActivity.class);
-                intent.putExtra("codeAccess",codeAcces);
-                intent.putExtra("from", "end");
-                startActivity(intent);
+                onBackPressed();
             }
         });
 
