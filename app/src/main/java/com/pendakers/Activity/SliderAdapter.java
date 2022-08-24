@@ -12,7 +12,7 @@ import com.pendakers.R;
 
 class SliderAdapter extends PagerAdapter {
     private Context context;
-    private int[]images = new int[]{R.drawable.logosmantanos, R.drawable.kangub};
+    private int[]images = new int[]{R.drawable.smd, R.drawable.balikpapan, R.drawable.derawan, R.drawable.kkr};
     SliderAdapter(Context c){
         context = c;
     }
