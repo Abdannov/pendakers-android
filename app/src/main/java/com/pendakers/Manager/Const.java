@@ -16,4 +16,5 @@ public class Const {
     public static final String LATITUDE ="latitude";
     public static final String LONGTITUDE ="longtitude";
     public static final String TIMEOUT ="time_out";
+    public static final String KAB_KOTA ="kabkota";
 }

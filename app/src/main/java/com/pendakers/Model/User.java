@@ -25,6 +25,17 @@ public class User{
 	@SerializedName("email")
 	private String email;
 
+	@SerializedName("kabkota")
+	private String kabkota;
+
+	public String getKabkota() {
+		return kabkota;
+	}
+
+	public void setKabkota(String kabkota) {
+		this.kabkota = kabkota;
+	}
+
 	public String getUpdatedAt(){
 		return updatedAt;
 	}

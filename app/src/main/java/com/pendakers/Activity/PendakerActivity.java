@@ -46,6 +46,7 @@ public class PendakerActivity extends AppCompatActivity {
     EditText search;
     ImageView btnSearch;
     TextView dataNotfound;
+    Button logout;
 
 
     @Override
@@ -72,7 +73,15 @@ public class PendakerActivity extends AppCompatActivity {
         lmData = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvData.setLayoutManager(lmData);
         //selectDatasmd();
-
+        logout = findViewById(R.id.btnLogout);
+        logout.setOnClickListener(v -> {
+            PrefManager prf= new PrefManager(PendakerActivity.this);
+            prf.remove(Const.TOKEN);
+            Intent i = new Intent(PendakerActivity.this, LoginActivity.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(i);
+            finish();
+        });
         srlData.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -91,7 +100,7 @@ public class PendakerActivity extends AppCompatActivity {
     public void functionSearch(String value){
         APIRequestData ardDatasmd = RetroServer.konekRetrofit().create(APIRequestData.class);
         PrefManager prf = new PrefManager(this);
-        Call<ResponseModelSamarinda> tampilData = ardDatasmd.ardSearchData("Bearer "+prf.getString(Const.TOKEN),codeAcces,value);
+        Call<ResponseModelSamarinda> tampilData = ardDatasmd.ardSearchData("Bearer "+prf.getString(Const.TOKEN),prf.getString(Const.KAB_KOTA),value);
         tampilData.enqueue(new Callback<ResponseModelSamarinda>() {
             @Override
             public void onResponse(Call<ResponseModelSamarinda> call, Response<ResponseModelSamarinda> response) {
@@ -137,7 +146,7 @@ public class PendakerActivity extends AppCompatActivity {
     private void selectDatasmd(){
         APIRequestData ardDatasmd = RetroServer.konekRetrofit().create(APIRequestData.class);
         PrefManager prf = new PrefManager(this);
-        Call<ResponseModelSamarinda> tampilData = ardDatasmd.ardSelectData("Bearer "+prf.getString(Const.TOKEN),codeAcces);
+        Call<ResponseModelSamarinda> tampilData = ardDatasmd.ardSelectData("Bearer "+prf.getString(Const.TOKEN), prf.getString(Const.KAB_KOTA));
         tampilData.enqueue(new Callback<ResponseModelSamarinda>() {
             @Override
             public void onResponse(Call<ResponseModelSamarinda> call, Response<ResponseModelSamarinda> response) {

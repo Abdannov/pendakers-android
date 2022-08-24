@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 PrefManager prf = new PrefManager(MainActivity.this);
                 if(!prf.getString(Const.TOKEN).equals("")){
-                    startActivity(new Intent(getApplicationContext(),HomeActivity.class));
+                    startActivity(new Intent(getApplicationContext(),PendakerActivity.class));
                 }else{
                     startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 }
